@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Subarna Adhikari | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b0f19;
+      --card: #131a2a;
+      --accent: #4fd1c5;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+
+    body {
+      background: radial-gradient(circle at top, #111827, #020617);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      max-width: 1100px;
+      align-items: center;
+    }
+
+    .hero img {
+      width: 100%;
+      max-width: 360px;
+      border-radius: 20px;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.6);
+    }
+
+    .hero h1 { font-size: 3rem; font-weight: 700; }
+    .hero span { color: var(--accent); }
+
+    .hero p {
+      margin-top: 1rem;
+      color: var(--muted);
+      font-size: 1.1rem;
+    }
+
+    .buttons { margin-top: 2rem; }
+
+    .btn {
+      display: inline-block;
+      margin: 0.4rem;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      background: var(--accent);
+      color: #020617;
+      font-weight: 600;
+      text-decoration: none;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .btn.outline {
+      background: transparent;
+      border: 1px solid var(--accent);
+      color: var(--accent);
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(79, 209, 197, 0.25);
+    }
+
+    section { padding: 4rem 10%; }
+
+    h2 { font-size: 2.2rem; margin-bottom: 2rem; color: var(--accent); }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: linear-gradient(145deg, #0f172a, #020617);
+      border-radius: 16px;
+      padding: 1.5rem;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+    }
+
+    .card p { color: var(--muted); font-size: 0.95rem; }
+
+    /* Modal */
+    .modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.75);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+
+    .modal-content {
+      background: #020617;
+      padding: 2rem;
+      border-radius: 16px;
+      max-width: 500px;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .close { color: var(--accent); cursor: pointer; float: right; }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="hero">
+    <img src="photo.jpg" alt="Subarna Adhikari">
+    <div>
+      <h1>Hi, I'm <span>Subarna Adhikari</span></h1>
+      <p>
+        Computer Science & Engineering student with strong interests in
+        scientific computing, robotics, embedded systems, and large-scale IT infrastructure.
+        Actively seeking research-driven environments like CERN.
+      </p>
+      <div class="buttons">
+        <a href="Subarna_Adhikari_Resume.pdf" class="btn">Download CV</a>
+        <a href="https://github.com/SubarnaAdhikari" class="btn outline" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/subarnaadhikari" class="btn outline" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section>
+  <h2>Research Interests</h2>
+  <p style="color: var(--muted); max-width: 800px; margin-bottom: 1.5rem;">
+    My interests align with large-scale scientific research environments, focusing on reliability,
+    performance, and real-world impact. I am particularly motivated by systems that support
+    experimental physics, automation, and data-intensive research.
+  </p>
+  <div class="grid">
+    <div class="card"><h3>Scientific Computing</h3><p>High-performance computing, simulations, numerical methods, data-intensive pipelines.</p></div>
+    <div class="card"><h3>Robotics & Automation</h3><p>Embedded control systems, sensor fusion, real-time decision-making.</p></div>
+    <div class="card"><h3>IT & Distributed Systems</h3><p>Scalable software, monitoring systems, infrastructure supporting scientific experiments.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>Selected Projects</h2>
+  <p style="color: var(--muted); max-width: 850px; margin-bottom: 1.5rem;">
+    A selection of academic, self-initiated, and concept-driven projects demonstrating my interest
+    in research-oriented software systems, robotics, and scalable engineering solutions.
+  </p>
+  <div class="grid">
+
+    <div class="card" onclick="openModal('hms')">
+      <h3>Hospital Management System (HMS)</h3>
+      <p>Full-stack system for hospital workflow automation.</p>
+    </div>
+
+    <div class="card" onclick="openModal('solar')">
+      <h3>IoT-Based Dual Axis Solar Tracker</h3>
+      <p>Embedded system optimizing solar energy capture.</p>
+    </div>
+
+    <div class="card" onclick="openModal('detector')">
+      <h3>Simulated Particle Detector Data Pipeline</h3>
+      <p>Concept project inspired by large-scale physics experiments.</p>
+    </div>
+
+    <div class="card" onclick="openModal('robot')">
+      <h3>Autonomous Line-Following & Obstacle Robot</h3>
+      <p>Real-time control and sensor-based navigation.</p>
+    </div>
+
+    <div class="card" onclick="openModal('monitor')">
+      <h3>Distributed System Health Monitor</h3>
+      <p>Monitoring and logging framework for server infrastructure.</p>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <h2>Engineering & Systems Timeline</h2>
+  <div class="card">
+    <p><strong>2023:</strong> Foundation in programming, data structures, and electronics.</p>
+    <p><strong>2024:</strong> Embedded systems, IoT projects, robotics experimentation.</p>
+    <p><strong>2025:</strong> Full-stack systems, distributed concepts, research-inspired simulations.</p>
+    <p><strong>Future:</strong> Contribution to large-scale scientific computing and experimental systems.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Education</h2>
+  <div class="card">
+    <h3>B.Tech – Computer Science & Engineering</h3>
+    <p>Government College of Engineering & Textile Technology, Berhampore, India</p>
+  </div>
+</section>
+
+<footer>
+  © <span id="year"></span> Subarna Adhikari · ATS‑Optimized · Research‑Focused Portfolio
+</footer>
+
+<!-- Modals -->
+<div class="modal" id="hms"><div class="modal-content"><span class="close" onclick="closeModal('hms')">✕</span><h3>Hospital Management System</h3><p>Designed and implemented a full-stack hospital management platform handling patient records, appointments, billing, and staff coordination. Focused on database design, authentication, and reliability of critical workflows.</p><p><strong>Tech:</strong> HTML, CSS, JavaScript, PHP, MySQL</p></div></div>
+
+<div class="modal" id="solar"><div class="modal-content"><span class="close" onclick="closeModal('solar')">✕</span><h3>IoT-Based Dual Axis Solar Tracker</h3><p>Developed an embedded system using microcontrollers and sensors to dynamically orient solar panels. Emphasized real-time feedback control and energy optimization.</p><p><strong>Tech:</strong> Arduino, LDRs, Servo Motors</p></div></div>
+
+<div class="modal" id="detector"><div class="modal-content"><span class="close" onclick="closeModal('detector')">✕</span><h3>Simulated Particle Detector Data Pipeline</h3><p>Conceptual project inspired by CERN experiments. Designed a simulated data flow from detector signals to processing modules, focusing on data throughput, fault tolerance, and modular architecture.</p><p><strong>Focus:</strong> Scientific computing, data pipelines, system design</p></div></div>
+
+<div class="modal" id="robot"><div class="modal-content"><span class="close" onclick="closeModal('robot')">✕</span><h3>Autonomous Robot Navigation System</h3><p>Built and tested an autonomous robot capable of line following and obstacle avoidance using IR and ultrasonic sensors. Implemented control logic and motor coordination.</p><p><strong>Tech:</strong> Arduino, IR Sensors, Ultrasonic Sensors</p></div></div>
+
+<div class="modal" id="monitor"><div class="modal-content"><span class="close" onclick="closeModal('monitor')">✕</span><h3>Distributed System Health Monitor</h3><p>Designed a lightweight monitoring system to track CPU usage, temperature, and uptime across multiple nodes. Aimed at understanding reliability in distributed infrastructures.</p><p><strong>Focus:</strong> IT systems, monitoring, reliability engineering</p></div></div>
+
+<script>
+  // Simple scroll reveal animation
+  const cards = document.querySelectorAll('.card');
+  const reveal = () => {
+    const trigger = window.innerHeight * 0.9;
+    cards.forEach(card => {
+      const top = card.getBoundingClientRect().top;
+      if(top < trigger) card.style.opacity = 1;
+    });
+  };
+  cards.forEach(c => c.style.opacity = 0);
+  window.addEventListener('scroll', reveal);
+  reveal();
+
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+  function openModal(id){ document.getElementById(id).style.display='flex'; }
+  function closeModal(id){ document.getElementById(id).style.display='none'; }
+</script>
+
+</body>
+</html>
